@@ -2,6 +2,10 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939) 
 
+### 피드백
+1. 문자열로된 여러 숫자들을 int형 배열에 집어넣을 때 stream API 를 사용하면 코드를 더욱 간결하게 작성가능하지만 극한의 성능 최적화가 필요하거나 아주 작은 단위 반복문에서는 기존 for문이 더 빠를 수 있다.
+ex) Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray();
+
 ### 성능 요약
 
 메모리: 79.5 MB, 시간: 11.83 ms
