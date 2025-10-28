@@ -2,6 +2,9 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12951) 
 
+### 피드백
+1. 해당문제는 숫자인지 아닌지 판별을 안하고도 공백문자 다음 문자를 toUpperCase로 올려도 되는 문제였음
+
 ### 성능 요약
 
 메모리: 83.7 MB, 시간: 15.77 ms
