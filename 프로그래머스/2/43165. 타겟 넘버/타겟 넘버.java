@@ -5,7 +5,6 @@ class Solution {
             if(prev == target) CNT++; // prev 가 target 이면 CNT 값 증가
             return;
         }
-        // index 값 넘겨주고, 지난 값에 numbers[인덱스] 인거 같은데 왜 안되냐고
         dfs(numbers,target,start + 1, prev + numbers[start]);
         dfs(numbers,target,start + 1, prev - numbers[start]);
     }
