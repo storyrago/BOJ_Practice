@@ -1,27 +1,26 @@
 import java.util.*;
 import java.io.*;
+import java.io.IOException;
 
-import static java.lang.Math.max;
-
-public class Main{
+public class Main {
     public static void main(String[] args)throws IOException {
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int n = Integer.parseInt(br.readLine());
-        st= new StringTokenizer(br.readLine());
-        int[]arr = new int[n+1];
-        int[]length = new int[n+1];
-        for(int i = 0;i<n;i++) arr[i] = Integer.parseInt(st.nextToken());
-
-        int maxLen = 0;
-
-        for(int i = 0;i<n;i++){
-            length[i] = 1;
-            for(int j = 0;j<i;j++){
-                if(arr[i] > arr[j]) length[i] = max(length[i],length[j] + 1);
-            }
-            if(maxLen < length[i]) maxLen = length[i];
+        st = new StringTokenizer(br.readLine());
+        int[]nums = new int[n+1];
+        for(int i = 1;i<=n;i++){
+            nums[i] = Integer.parseInt(st.nextToken());
         }
-        System.out.println(maxLen);
+        int[]dp = new int[n+1];
+        int maxlen = 0;
+        for(int i = 1;i<=n;i++){
+            dp[i] = 1;
+            for(int j = 1;j<i;j++){
+                if(nums[i] > nums[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
+            }
+            maxlen = Math.max(maxlen, dp[i]);
+        }
+        System.out.println(maxlen);
     }
 }
