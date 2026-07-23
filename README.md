@@ -7,7 +7,7 @@
 
 <br>
 
-## 💻 사용 기술 (Tech Stack)
+## 💻 사용 언어 (Tech Stack)
 
 <p>
   <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white">
